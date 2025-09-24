@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#Special-Offer {
+  height: 40px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 12px;
+  font-weight: 700;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 4px;
+}
+
+#navbar {
+  height: 72px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  display: flex;
+}
+
+#menu {
+  width: 60px;
+  height: 60px;
+  margin: 5px 10px 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+#menu-icon {
+  background-image: url(menu_4204600.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#zynra-icon {
+  width: 130px;
+  height: 40px;
+  color: white;
+  margin: 15px 90px 5px 0px;
+  text-align: center;
+  background-image: url(Zynra-icon.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#options {
+  width: 180px;
+  height: 60px;
+  margin: 5px 0px 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#option1 { background-image: url(search.png); background-size: cover; }
+#option2 { background-image: url(wishlist_5949160.png); background-size: cover; }
+#option3 { background-image: url(people_13686701.png); background-size: cover; }
+#option4 { background-image: url(shopping-cart_3954224.png); background-size: cover; }
+
+#advertisement-section {
+  background-color: beige;
+  height: 750px;
+}
+#first-image {
+  background-color: grey;
+  height: 375px;
+  background-image: url(WhatsApp\ Image\ 2025-09-23\ at\ 23.07.41.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#second-image {
+  background-color: coral;
+  background-image: url(WhatsApp\ Image\ 2025-09-23\ at\ 23.07.42.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  font-size: 24px;
+  color: white;
+}
+
+#third-image {
+  background-color: grey;
+  height: 375px;
+  background-image: url("WhatsApp Image 2025-09-23 at 18.38.52 (2).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#fourth-image {
+  background-color: coral;
+  background-image: url("WhatsApp Image 2025-09-23 at 23.07.41 (1).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  font-size: 24px;
+  color: white;
+}
+
+#pre-fall {
+  font-family: "Outfit", sans-serif;
+  background-color: black;
+  border-radius: 15px;
+  padding: 5px;
+  border: 5px solid black;
+}
+#shop-man {
+  margin-bottom: 50px;
+  text-decoration: underline;
+  text-decoration-line: overline;
+  font-weight: 900;
+  background-color: rgb(142, 142, 101);
+  border-bottom: 3px solid white;
+}
+
+#old-money-heading {
+  text-align: center;
+  font-family: "Outfit";
+  letter-spacing: 4px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+#old-money-view-all {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: rgb(142, 142, 101);
+}
+
+/* Horizontal scroll for products */
+.product-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 20px;
+
+  /* add breathing space from left edge */
+  padding-left: 60px;   /* 👈 creates margin before first product */
+  scroll-snap-type: x mandatory;
+}
+
+
+.product-card {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: start;
+  padding: 25px;
+}
+.product-image {
+  width: 260px;   /* reduced from 300px */
+  height: 440px;  /* reduced from 500px */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  position: relative;   /* 👈 allows absolute positioning inside */
+}
+
+.fav-icon {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background-image: url("favourite-icon-square.png");
+  background-size: contain;
+  background-color: white;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.product-title {
+  margin-top: 10px;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.product-price {
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  color: rgb(90, 90, 90);
+}
+
+/* Individual left/right buttons on each product */
+.product-card button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgb(142, 142, 101);
+  border-radius: 50%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.product-card .prevBtn { left: 3px; }
+.product-card .nextBtn { right: 3px; }
+
+#products{
+  margin-left: 10px;
+}
+
+.view-all-card {
+  min-width: 200px;          /* space for the link */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: end;    /* aligns at end of scroll */
+}
+
+.view-all-card a {
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: rgb(142, 142, 101);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+#winter-products{
+  height: 400px;
+  background-color: rgb(142, 142, 101);
+  color: black;
+}
+
+.tags {
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-family: "Outfit", sans-serif;
+  color: black;
+  letter-spacing: 4px;
+}
+
+
+#footer-accordion {
+  width: 100%;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  font-family: "Outfit", sans-serif;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-btn::after {
+  content: "\25BC"; /* ▼ arrow */
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active::after {
+  transform: rotate(180deg); /* ▲ when open */
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+  font-size: 13px;
+  color: #444;
+}
+
+.accordion-content p {
+  margin: 10px 0;
+}
